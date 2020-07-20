@@ -5,6 +5,8 @@
 
 .alert{
     visibility: hidden;
+    transform: translateY(60vh);
+    z-index: 10;
 }
 
 .Criteria1,.Criteria2,.Criteria3,.Criteria4,.Criteria5,.Criteria6,.Criteria7{

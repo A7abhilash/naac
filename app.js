@@ -3,7 +3,7 @@ const selectCriteria = $(".selectCriteria");
 var displayCriteriaSection = $(".displayCriteriaSection");
 const submit = $(".submit");
 const alert = $(".alert");
-const result = $('.result');
+const result = $(".result");
 var cgpa = $(".cgpa");
 var grade = $(".grade");
 var outcome = $(".outcome");
@@ -14,7 +14,7 @@ submit.click(calculateResult);
 //Selecting the criteria
 function select() {
   //   console.log(selectCriteria.val());
-  result.css('display','none')
+  result.css("display", "none");
   displayCriteria(selectCriteria.val());
   event.stopImmediatePropagation();
 }
@@ -93,7 +93,7 @@ function calculateResult(event) {
 
 //Displaying result
 function displayResult(W, KAWGP) {
-  result.css('display','block')
+  result.css("display", "block");
 
   let CGPA = (KAWGP / W).toPrecision(3);
   cgpa.html(CGPA);
@@ -115,7 +115,7 @@ function displayResult(W, KAWGP) {
     }
     outcome.html("Accredited");
     outcome.css("color", "green");
-  } else  {
+  } else {
     grade.html("D");
     outcome.html("Not Accredited");
     outcome.css("color", "red");
@@ -125,6 +125,6 @@ function displayResult(W, KAWGP) {
 //Displaying alert
 function displayAlert() {
   alert.css("visibility", "visible");
-  setTimeout(() => alert.css("visibility", "hidden"), 3000);
-  result.css('display','none');
+  setTimeout(() => alert.css("visibility", "hidden"), 2000);
+  result.css("display", "none");
 }

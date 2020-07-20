@@ -7,7 +7,6 @@ const result = $('.result');
 var cgpa = $(".cgpa");
 var grade = $(".grade");
 var outcome = $(".outcome");
-
 /*********EVENT LISTNERS*********/
 submit.click(calculateResult);
 
@@ -97,7 +96,7 @@ function calculateResult(event) {
 function displayResult(W, KAWGP) {
   result.css('display','block')
 
-  let CGPA = Math.floor((KAWGP / W) * 100) / 100;
+  let CGPA = (KAWGP / W).toPrecision(3);
   cgpa.html(CGPA);
   if (CGPA > 1.5) {
     if (CGPA > 3.5) {
@@ -118,7 +117,6 @@ function displayResult(W, KAWGP) {
     outcome.html("Accredited");
     outcome.css("color", "green");
   } else  {
-    console.log(CGPA);
     grade.html("D");
     outcome.html("Not Accredited");
     outcome.css("color", "red");

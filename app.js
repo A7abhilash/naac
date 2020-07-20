@@ -79,7 +79,7 @@ function calculateResult(event) {
   // console.log(KAWGP/eval(W));
   for (let k = 4, j = 0; k < scope.length, j < Wi.length; k = k + 5, j++) {
     if (flag) {
-      scope[k].innerHTML = KAWGPi[j];
+      scope[k].innerHTML = KAWGPi[j].toPrecision(4);
     } else {
       scope[k].innerHTML = "";
     }

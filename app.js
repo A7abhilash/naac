@@ -53,7 +53,6 @@ function calculateResult(event) {
   for (let i = 2; i < scope.length; i = i + 5) {
     Wi.push(scope[i].innerHTML);
   }
-  // Wi.map((i)=>console.log(i))
 
   //get the values of current criteria's KAGPi
   let KAGPi = [];

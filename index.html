@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Offline -->
-    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <!-- Online -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="./style.css" />
     <title>NAAC</title>
@@ -24,8 +24,7 @@
         <div class="row">
           <div class="col-md-4 offset-md-4 my-2 text-center">
             <p class="alert bg-warning">
-              This will be an alert box which will be hidden and popups only
-              when there is an invalid input from the user.
+              Invalid Input
             </p>
           </div>
         </div>
@@ -49,7 +48,7 @@
               <option value="Criteria7">Criteria 7</option>
             </select>
 
-            <div class="my-3 displayCriteriaSection p-3 text-center">
+            <div class="my-3 displayCriteriaSection text-center">
               <div class="Criteria1">
                 <h2 class="text-center"><u>Curricular Aspects</u></h2>
                 <table class="table table-responsive table-striped">
@@ -68,37 +67,49 @@
                       <th>Curriculum Design & Development</th>
                       <th>50</th>
                       <th><input type="number" class="form-control" /></th>
-                      <th></th>
+                      <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Acedamic Flexibility</th>
                       <th>50</th>
                       <th><input type="number" class="form-control" /></th>
-                      <th></th>
+                      <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Curriculum Enrichment</th>
                       <th>30</th>
                       <th><input type="number" class="form-control" /></th>
-                      <th></th>
+                      <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Feed Back System</th>
                       <th>20</th>
                       <th><input type="number" class="form-control" /></th>
-                      <th></th>
+                      <th class="KAWGPi"></th>
                     </tr>
+                    <tr>
+                      <th>4</th>
+                      <th>Feed Back System</th>
+                      <th>20</th>
+                      <th><input type="number" class="form-control" /></th>
+                      <th class="KAWGPi"></th>
+                    </tr>
+                    
                   </tbody>
                 </table>
-                <button class="btn btn-primary float-right">
+                <button
+                  type="submit"
+                  class="btn btn-primary float-right submit"
+                >
                   Submit
                 </button>
               </div>
               <div class="Criteria2">
                 <h2>Criteria 2</h2>
+                
               </div>
               <div class="Criteria3">
                 <h2>Criteria 3</h2>
@@ -123,14 +134,25 @@
     <!-- END:Criteria -->
 
     <!-- START:Results -->
-    <section>
+    <section class="result" id="result">
       <div class="container">
         <div class="rows">
           <div class="col-md-6 offset-md-3">
-            <p class="result bg-light text-center p-2">
-              This will be the result section which will be hidden and is
-              visible only when the user hits submit.
-            </p>
+            <div class="card">
+              <h3 class="card-header bg-dark text-white text-center">
+                Results
+              </h3>
+              <div class="card-body">
+                <div class="row">
+                  <dt class="col-6">CGPA:</dt>
+                  <dd class="col-6 cgpa"></dd>
+                  <dt class="col-6">Grade:</dt>
+                  <dd class="col-6 grade"></dd>
+                  <dt class="col-6">Status:</dt>
+                  <dd class="col-6 outcome"></dd>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -138,9 +160,9 @@
     <!-- END:Results -->
 
     <!-- Offline -->
-    <!-- <script src="./bootstrap/js/jQuery.js"></script> -->
+    <script src="./bootstrap/js/jQuery.js"></script>
     <!-- Online -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
 
     <script src="./app.js"></script>
   </body>

@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.alert{
+    visibility: hidden;
+}
+
 .Criteria1,.Criteria2,.Criteria3,.Criteria4,.Criteria5,.Criteria6,.Criteria7{
     height: auto;
     display: none;
@@ -13,14 +17,15 @@ thead{
 }
 tbody{
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-tbody :nth-child(2){
-    
 }
 
 .btn{
     font-size: 18px;
     font-weight: 500;
+}
+
+.result{
+    display: none;
 }

@@ -14,40 +14,44 @@
     /> -->
 
     <link rel="stylesheet" href="./style.css" />
-    <title>NAAC</title>
+    <title>NAAC Calculation Tool</title>
   </head>
   <body>
     <!-- START:Header -->
-    <header class="jumbotron">
-      <h1 class="text-center">NAAC</h1>
-    </header>
-    <!-- END:Header -->
-
-    <!-- START:Alert  -->
-    <!-- <section>
+    <header class="bg-light py-3 p-md-5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 offset-md-4 my-2 text-center">
-            <p class="alert bg-warning">
-              Invalid Input
-            </p>
+        <div class="row text-center align-items-center">
+          <div class="col-md-3">
+            <img src="./imgs/jsslogo.png" alt="JSSSTU" class="img-fluid jss" />
+          </div>
+          <div class="col-md-9">
+            <h1 class="collegeName">JSS SCIENCE & TECHNOLOGY UNIVERSITY</h1>
+          </div>
+          <div class="col-3 mt-3">
+            <img src="./imgs/lcclogo.png" alt="LCC" class="img-fluid lcc float-right" />
+          </div>
+          <div class="col-9 float-left">
+            <h2 class="clubName">LINUX CAMPUS CLUB</h2>
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- END:Alert -->
+    </header>
+    <!-- END:Header -->
 
     <!-- START:Instructions -->
     <section>
       <div class="container">
         <div class="rows">
-          <div class="col-md-8 offset-md-2 bg-warning p-2 my-3">
+          <div class="col-12 my-3 bg-light p-2">
+            <h3 class="naac text-center">NAAC Calculation Tool</h3>
+          </div>
+          <div class="col-12 p-2 my-5 bg-warning">
             <h6>Instructions:</h6>
-            <p>
-              Enter the Key Indicator Grade Points(0-4) in the provided input
+            <i>
+              -Enter the Key Indicator Grade Points(0-4) in the provided input
               field for all the criterias and click on the SUBMIT button to get
-              the results
-            </p>
+              the results.
+            </i>
           </div>
         </div>
       </div>
@@ -57,10 +61,13 @@
     <!-- START:Criteria -->
     <section class="criteria">
       <div class="container">
-        <div class="rows">
-          <div class="col-12 bg-light mb-5 p-3">
-            <select onchange="select()" class="form-control selectCriteria">
-              <option value="">Select your Criteria</option>
+        <div class="row">
+          <div class="col-12 bg-light mb-5 py-3">
+            <select
+              onchange="displayCriteria()"
+              class="form-control selectCriteria"
+            >
+              <option value="">Select Criteria</option>
               <option value="Criteria1">Criteria 1: Curricular Aspects</option>
               <option value="Criteria2"
                 >Criteria 2: Teaching-Learning and Evaluation</option
@@ -75,7 +82,7 @@
                 >Criteria 5: Student Support and Progression</option
               >
               <option value="Criteria6"
-                >Criteria 6: Governance,Leadership and Management</option
+                >Criteria 6: Governance, Leadership and Management</option
               >
               <option value="Criteria7"
                 >Criteria 7: Institutional Values and Best Practices</option
@@ -99,29 +106,37 @@
                     <tr>
                       <th>1</th>
                       <th>Curriculum Design & Development</th>
-                      <th>50</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">50</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Acedamic Flexibility</th>
-                      <th>50</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">50</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Curriculum Enrichment</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Feed Back System</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -145,50 +160,64 @@
                     <tr>
                       <th>1</th>
                       <th>Student Enrolment and Profile</th>
-                      <th>10</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">10</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Catering to Student Diversity</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Teaching- Learning Process</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Teacher Profile and Qaulity</th>
-                      <th>50</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">50</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>5</th>
                       <th>Evaluation Process and Reforms</th>
-                      <th>40</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">40</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>6</th>
                       <th>Student Performance and Learning Outcomes</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>7</th>
                       <th>Student Satisfaction Survey</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -212,50 +241,64 @@
                     <tr>
                       <th>1</th>
                       <th>Promotion of Research and Facilities</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Resource Mobilization for Research</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Innovation Ecosystem</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Research Publications and Awards</th>
-                      <th>100</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">100</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>5</th>
                       <th>Consultancy</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>6</th>
                       <th>Extension Activities</th>
-                      <th>40</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">40</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>7</th>
                       <th>Collaboration</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -279,29 +322,37 @@
                     <tr>
                       <th>1</th>
                       <th>Physical Facilities</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Library as a Learning Resource</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>IT Infrastructure</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Maintainence of Campus Infrastructure</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -325,29 +376,37 @@
                     <tr>
                       <th>1</th>
                       <th>Student Support</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Student Progression</th>
-                      <th>40</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">40</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Student Participation and Activities</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Alumini Engagement</th>
-                      <th>10</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">10</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -355,7 +414,7 @@
               </div>
               <div class="Criteria6">
                 <h2 class="text-center">
-                  <u>Governance,Leadership and Management</u>
+                  <u>Governance, Leadership and Management</u>
                 </h2>
                 <table class="table table-responsive table-striped">
                   <thead>
@@ -371,36 +430,46 @@
                     <tr>
                       <th>1</th>
                       <th>Institutional Vision and Leadership</th>
-                      <th>10</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">10</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Strategy Development and Deployment</th>
-                      <th>10</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">10</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Faculty Empowerment Strategies</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>4</th>
                       <th>Financial Management and Resource Mobilization</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>5</th>
                       <th>Internal Qaulity Assurance System</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
@@ -424,34 +493,37 @@
                     <tr>
                       <th>1</th>
                       <th>Institutional Values and Social Responsibilties</th>
-                      <th>50</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">50</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>2</th>
                       <th>Best Practices</th>
-                      <th>30</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">30</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                     <tr>
                       <th>3</th>
                       <th>Institutional Distinctiveness</th>
-                      <th>20</th>
-                      <th><input type="number" class="form-control" /></th>
+                      <th class="Wi">20</th>
+                      <th>
+                        <input type="number" class="form-control KAGPi" />
+                      </th>
                       <th class="KAWGPi"></th>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <button
-                type="submit"
-                class="btn btn-primary float-right submit mb-2"
-              >
-                Submit
-              </button>
             </div>
+            <button type="submit" class="btn btn-primary float-right submit">
+              Submit
+            </button>
           </div>
         </div>
       </div>
@@ -459,9 +531,9 @@
     <!-- END:Criteria -->
 
     <!-- START:Results -->
-    <section class="result mb-5" id="result">
+    <section class="result mb-5">
       <div class="container">
-        <div class="rows">
+        <div class="row">
           <div class="col-md-6 offset-md-3">
             <div class="card">
               <h3 class="card-header bg-dark text-white text-center">
@@ -496,3 +568,5 @@
     <script src="./main.js"></script>
   </body>
 </html>
+
+

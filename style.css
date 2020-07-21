@@ -3,10 +3,33 @@
     padding: 0;
 }
 
-.alert{
+/* .alert{
     visibility: hidden;
     transform: translateY(60vh);
     z-index: 10;
+} */
+header{
+    display: flex;
+}
+.jss{
+    width: 10rem;
+}
+.lcc{
+    width: 6rem;
+}
+.collegeName{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d61a3a
+}
+.clubName{
+    font-size: 1.8rem;
+    font-weight: 650;
+}
+.naac{
+    font-size: 2.2rem;
+    font-weight: 100;
+    font-family: cursive;
 }
 
 .Criteria1,.Criteria2,.Criteria3,.Criteria4,.Criteria5,.Criteria6,.Criteria7{
@@ -23,7 +46,7 @@ tbody{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.btn{
+.submit{
     font-size: 18px;
     font-weight: 500;
 }

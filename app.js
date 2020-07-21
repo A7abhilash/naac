@@ -126,5 +126,6 @@ function displayResult(W, KAWGP) {
 function displayAlert() {
   alert.css("visibility", "visible");
   setTimeout(() => alert.css("visibility", "hidden"), 2000);
+  // window.alert('Invalid input.')
   result.css("display", "none");
 }

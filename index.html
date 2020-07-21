@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Offline -->
-    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <!-- Online -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
-    />
+    /> -->
 
     <link rel="stylesheet" href="./style.css" />
     <title>NAAC</title>
@@ -24,7 +24,7 @@
     <!-- END:Header -->
 
     <!-- START:Alert  -->
-    <section>
+    <!-- <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4 offset-md-4 my-2 text-center">
@@ -34,8 +34,25 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- END:Alert -->
+
+    <!-- START:Instructions -->
+    <section>
+      <div class="container">
+        <div class="rows">
+          <div class="col-md-8 offset-md-2 bg-warning p-2 my-3">
+            <h6>Instructions:</h6>
+            <p>
+              Enter the Key Indicator Grade Points(0-4) in the provided input
+              field for all the criterias and click on the SUBMIT button to get
+              the results
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END:Instructions -->
 
     <!-- START:Criteria -->
     <section class="criteria">
@@ -44,13 +61,25 @@
           <div class="col-12 bg-light mb-5 p-3">
             <select onchange="select()" class="form-control selectCriteria">
               <option value="">Select your Criteria</option>
-              <option value="Criteria1">Criteria 1</option>
-              <option value="Criteria2">Criteria 2</option>
-              <option value="Criteria3">Criteria 3</option>
-              <option value="Criteria4">Criteria 4</option>
-              <option value="Criteria5">Criteria 5</option>
-              <option value="Criteria6">Criteria 6</option>
-              <option value="Criteria7">Criteria 7</option>
+              <option value="Criteria1">Criteria 1: Curricular Aspects</option>
+              <option value="Criteria2"
+                >Criteria 2: Teaching-Learning and Evaluation</option
+              >
+              <option value="Criteria3"
+                >Criteria 3: Research Innovation and Extension</option
+              >
+              <option value="Criteria4"
+                >Criteria 4: Infrastructure and Learning Resource</option
+              >
+              <option value="Criteria5"
+                >Criteria 5: Student Support and Progression</option
+              >
+              <option value="Criteria6"
+                >Criteria 6: Governance,Leadership and Management</option
+              >
+              <option value="Criteria7"
+                >Criteria 7: Institutional Values and Best Practices</option
+              >
             </select>
 
             <div class="my-3 displayCriteriaSection text-center">
@@ -97,12 +126,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit mb-2"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria2">
                 <h2 class="text-center">
@@ -170,12 +193,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria3">
                 <h2 class="text-center">
@@ -243,12 +260,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria4">
                 <h2 class="text-center">
@@ -295,12 +306,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria5">
                 <h2 class="text-center">
@@ -347,12 +352,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria6">
                 <h2 class="text-center">
@@ -406,15 +405,11 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
               <div class="Criteria7">
-                <h2 class="text-center"><u>Curricular Aspects</u></h2>
+                <h2 class="text-center">
+                  <u>Institutional Values and Best Practices</u>
+                </h2>
                 <table class="table table-responsive table-striped">
                   <thead>
                     <tr>
@@ -449,13 +444,13 @@
                     </tr>
                   </tbody>
                 </table>
-                <button
-                  type="submit"
-                  class="btn btn-primary float-right submit"
-                >
-                  Submit
-                </button>
               </div>
+              <button
+                type="submit"
+                class="btn btn-primary float-right submit mb-2"
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>
@@ -490,14 +485,14 @@
     <!-- END:Results -->
 
     <!-- Offline -->
-    <!-- <script src="./bootstrap/js/jQuery.js"></script> -->
+    <script src="./bootstrap/js/jQuery.js"></script>
     <!-- Online -->
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
-    ></script>
-
-    <script src="./app.js"></script>
+    ></script> -->
+    <!-- <script src="./app.js"></script> -->
+    <script src="./main.js"></script>
   </body>
 </html>

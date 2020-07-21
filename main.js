@@ -1,5 +1,5 @@
 /*********VARIABLES*********/
-const selectCriteria = $(".selectCriteria");
+// const selectCriteria = $(".selectCriteria");
 var displayCriteriaSection = $(".displayCriteriaSection");
 
 var Wi = $(".Wi");
@@ -16,10 +16,15 @@ var outcome = $(".outcome");
 submit.click(calculateResult);
 
 /*********FUNCTIONS **********/
+//Selecting the criteria
+// function select() {
+//     displayCriteria(selectCriteria.val());
+//     event.stopImmediatePropagation();
+//   }
 
 //Displaying the selected criteria
-function displayCriteria() {
-  let criteria=  selectCriteria.val()
+function displayCriteria(criteria) {
+//   let criteria=  selectCriteria.val()
   if (criteria !== "") {
     displayCriteriaSection.children().filter((child) => {
       // console.log(displayCriteriaSection.children()[child].className !== criteria);

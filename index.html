@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Offline -->
-    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <!-- Online -->
     <link
       rel="stylesheet"
@@ -14,7 +14,7 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-    
+
     <title>NAAC Calculation Tool</title>
   </head>
   <body>
@@ -22,17 +22,14 @@
     <header class="bg-light py-3 p-md-5">
       <div class="container">
         <div class="row text-center align-items-center">
-          <div class="col-md-3">
+          <div class="col-md-2">
             <img src="./imgs/jsslogo.png" alt="JSSSTU" class="img-fluid jss" />
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <h1 class="collegeName">JSS SCIENCE & TECHNOLOGY UNIVERSITY</h1>
           </div>
-          <div class="col-3 mt-3">
-            <img src="./imgs/lcclogo.png" alt="LCC" class="img-fluid lcc float-right" />
-          </div>
-          <div class="col-9 float-left">
-            <h2 class="clubName">LINUX CAMPUS CLUB</h2>
+          <div class="col-md-2 mt-3">
+            <img src="./imgs/lcclogo.png" alt="LCC" class="img-fluid lcc" />
           </div>
         </div>
       </div>
@@ -50,8 +47,8 @@
             <h6>Instructions:</h6>
             <i>
               -Enter the Key Indicator Grade Points(0-4) in the provided input
-              field for all the criterias and click on the SUBMIT button to get
-              the results.
+              field for all the criterias and click on the SUBMIT button at the
+              end to get the results.
             </i>
           </div>
         </div>
@@ -64,8 +61,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12 bg-light mb-5 py-3">
-            <select
-              onchange="displayCriteria()"
+            <!-- <select
+              onchange="select()"
               class="form-control selectCriteria"
             >
               <option value="">Select Criteria</option>
@@ -88,7 +85,7 @@
               <option value="Criteria7"
                 >Criteria 7: Institutional Values and Best Practices</option
               >
-            </select>
+            </select> -->
 
             <div class="my-3 displayCriteriaSection text-center">
               <div class="Criteria1">
@@ -142,6 +139,12 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria2')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria2">
                 <h2 class="text-center">
@@ -223,6 +226,18 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria1')"
+                >
+                  Prev
+                </button>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria3')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria3">
                 <h2 class="text-center">
@@ -304,6 +319,18 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria2')"
+                >
+                  Prev
+                </button>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria4')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria4">
                 <h2 class="text-center">
@@ -358,6 +385,18 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria3')"
+                >
+                  Prev
+                </button>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria5')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria5">
                 <h2 class="text-center">
@@ -412,6 +451,18 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria4')"
+                >
+                  Prev
+                </button>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria6')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria6">
                 <h2 class="text-center">
@@ -475,6 +526,18 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria5')"
+                >
+                  Prev
+                </button>
+                <button
+                  class="btn btn-primary float-right"
+                  onclick="displayCriteria('Criteria7')"
+                >
+                  Next
+                </button>
               </div>
               <div class="Criteria7">
                 <h2 class="text-center">
@@ -520,11 +583,20 @@
                     </tr>
                   </tbody>
                 </table>
+                <button
+                  class="btn btn-primary float-left"
+                  onclick="displayCriteria('Criteria6')"
+                >
+                  Prev
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary float-right submit"
+                >
+                  Submit
+                </button>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right submit">
-              Submit
-            </button>
           </div>
         </div>
       </div>
@@ -562,7 +634,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 offset-md-4">
-            <h2>Developed by: </h2>
+            <h2>Developed by:</h2>
             <p>1. Abhilash M Hadli</p>
             <p>2. Sumantha Ullasa Prabhu</p>
             <p>3. Sparsh Venkappa Rao</p>
@@ -573,16 +645,14 @@
     <!-- END:Footer -->
 
     <!-- Offline -->
-    <!-- <script src="./bootstrap/js/jQuery.js"></script> -->
+    <script src="./bootstrap/js/jQuery.js"></script>
     <!-- Online -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    
+
     <script src="./main.js"></script>
   </body>
 </html>
-
-

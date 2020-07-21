@@ -1,16 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    user-select: none;
 }
 
-/* .alert{
-    visibility: hidden;
-    transform: translateY(60vh);
-    z-index: 10;
-} */
-header{
-    display: flex;
-}
 .jss{
     width: 10rem;
 }
@@ -19,8 +13,8 @@ header{
 }
 .collegeName{
     font-size: 2rem;
-    font-weight: 700;
-    color: #d61a3a
+    font-weight: 400;
+    
 }
 .clubName{
     font-size: 1.8rem;

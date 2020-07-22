@@ -26,6 +26,12 @@
     font-family: cursive;
 }
 
+.page{
+    border-radius: 10px;
+    color: black;
+    transition-duration: 0.4s;
+}
+
 .Criteria2,.Criteria3,.Criteria4,.Criteria5,.Criteria6,.Criteria7{
     height: auto;
     display: none;

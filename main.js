@@ -6,6 +6,7 @@ var Wi = $(".Wi");
 var KAGPi = $(".KAGPi");
 var KAWGPi = $(".KAWGPi");
 var GPAi = $(".GPAi");
+var CrGPA=$('.CrGPA')
 const submit = $(".submit");
 const total = $(".total");
 const result = $(".result");
@@ -57,21 +58,18 @@ function calculateResult(event) {
     }
 
     for (let i = 0; i < GPAi.length; i++) {
-      calculateGPA(GPAi[i]);
+      calculateGPA(GPAi[i],i);
     }
-
     displayResult(eval(KAWGP));
   }
 }
 
 //Calculating GPA
-function calculateGPA(GPAi) {
+function calculateGPA(GPAi,j) {
   let GPA = 0;
   let scopeWi = 0;
   let scope = $(GPAi).parent().parent().children();
-  // scope = $(scope).children()[4]
-  // scope =
-  // console.log(scope);
+
   for (let i = 0; i < scope.length; i++) {
     let requiredScope = $(scope[i]).children()[4].innerHTML;
     if (scope[i].className === "") {
@@ -80,17 +78,15 @@ function calculateGPA(GPAi) {
     } else {
       scopeWi = $(scope[i]).children()[2].innerHTML;
       GPAi.innerHTML = eval(GPA).toPrecision(4);
+      CrGPA[j].innerHTML = (GPAi.innerHTML/scopeWi).toPrecision(3)
     }
   }
-  // console.log(eval(GPA));
 }
 
 //Displaying the result
 function displayResult(KAWGP) {
   result.css("display", "block");
   total.css("visibility", "visible");
-
-  // console.log(KAWGP);
 
   let CGPA = (KAWGP / 1000).toPrecision(3);
   cgpa.html(CGPA);

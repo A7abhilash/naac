@@ -45,6 +45,10 @@ tbody{
     font-weight: 500;
 }
 
+.total{
+    visibility: hidden;
+}
+
 .result{
     display: none;
 }

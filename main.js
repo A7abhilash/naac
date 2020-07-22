@@ -5,8 +5,9 @@ var displayCriteriaSection = $(".displayCriteriaSection");
 var Wi = $(".Wi");
 var KAGPi = $(".KAGPi");
 var KAWGPi = $(".KAWGPi");
+var GPAi = $(".GPAi");
 const submit = $(".submit");
-
+const total = $(".total");
 const result = $(".result");
 var cgpa = $(".cgpa");
 var grade = $(".grade");
@@ -16,15 +17,9 @@ var outcome = $(".outcome");
 submit.click(calculateResult);
 
 /*********FUNCTIONS **********/
-//Selecting the criteria
-// function select() {
-//     displayCriteria(selectCriteria.val());
-//     event.stopImmediatePropagation();
-//   }
 
 //Displaying the selected criteria
 function displayCriteria(criteria) {
-//   let criteria=  selectCriteria.val()
   if (criteria !== "") {
     displayCriteriaSection.children().filter((child) => {
       // console.log(displayCriteriaSection.children()[child].className !== criteria);
@@ -48,7 +43,8 @@ function calculateResult(event) {
   for (let i = 0; i < KAGPi.length; i++) {
     if (KAGPi[i].value === "" || KAGPi[i].value < 0 || KAGPi[i].value > 4) {
       window.alert("Invalid Input. Please follow the INSTRUCTIONS.");
-      result.css('display','none')
+      result.css("display", "none");
+      total.css("visibility", "hidden");
       flag = false;
       break;
     }
@@ -59,15 +55,42 @@ function calculateResult(event) {
       KAWGPi[i].innerHTML = (Wi[i].innerHTML * KAGPi[i].value).toPrecision(4);
       KAWGP += `+ ${KAWGPi[i].innerHTML}`;
     }
+
+    for (let i = 0; i < GPAi.length; i++) {
+      calculateGPA(GPAi[i]);
+    }
+
     displayResult(eval(KAWGP));
   }
+}
+
+//Calculating GPA
+function calculateGPA(GPAi) {
+  let GPA = 0;
+  let scopeWi = 0;
+  let scope = $(GPAi).parent().parent().children();
+  // scope = $(scope).children()[4]
+  // scope =
+  // console.log(scope);
+  for (let i = 0; i < scope.length; i++) {
+    let requiredScope = $(scope[i]).children()[4].innerHTML;
+    if (scope[i].className === "") {
+      // console.log(requiredScope);
+      GPA += `+ ${requiredScope}`;
+    } else {
+      scopeWi = $(scope[i]).children()[2].innerHTML;
+      GPAi.innerHTML = eval(GPA).toPrecision(4);
+    }
+  }
+  // console.log(eval(GPA));
 }
 
 //Displaying the result
 function displayResult(KAWGP) {
   result.css("display", "block");
+  total.css("visibility", "visible");
 
-  console.log(KAWGP);
+  // console.log(KAWGP);
 
   let CGPA = (KAWGP / 1000).toPrecision(3);
   cgpa.html(CGPA);

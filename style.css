@@ -47,6 +47,7 @@ tbody{
 
 .total{
     visibility: hidden;
+    font-size: 1.6rem;
 }
 
 .result{

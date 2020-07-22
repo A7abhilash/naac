@@ -19,8 +19,6 @@ submit.click(calculateResult);
 /*********FUNCTIONS **********/
 //Selecting the criteria
 function select() {
-  //   console.log(selectCriteria.val());
-  // result.css("display", "none");
   displayCriteria(selectCriteria.val());
   event.stopImmediatePropagation();
 }
@@ -28,8 +26,7 @@ function select() {
 //Displaying the selected criteria
 function displayCriteria(criteria) {
   selectCriteria.val(criteria);
-// console.log(selectCriteria);
-
+  
   if (criteria !== "") {
     displayCriteriaSection.children().filter((child) => {
       // console.log(displayCriteriaSection.children()[child].className !== criteria);

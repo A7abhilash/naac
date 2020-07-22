@@ -21,8 +21,6 @@ function select() {
 
 //Displaying the selected criteria
 function displayCriteria(criteria) {
-  selectCriteria.val()=criteria;
-  
   if (criteria !== "") {
     displayCriteriaSection.children().filter((child) => {
       // console.log(displayCriteriaSection.children()[child].className !== criteria);

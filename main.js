@@ -48,7 +48,7 @@ function check(i){
   if( this.KAGPi[i].value==='' || this.KAGPi[i].value<0 || this.KAGPi[i].value>4){
     this.KAGPi[i].value='';
     this.KAGPi[i].style.border="2px solid red";
-    this.KAGPi[i].placeholder="Invalid Input"
+    this.KAGPi[i].placeholder="Invalid"
     this.KAWGPi[i].innerHTML='';
   }
   else{
@@ -60,7 +60,7 @@ function check(i){
   while(i>=0){
     if(this.KAGPi[i].value===''){
       this.KAGPi[i].style.border="2px solid red";
-      this.KAGPi[i].placeholder="Invalid Input"
+      this.KAGPi[i].placeholder="Invalid"
     }
       i--;
   }
@@ -87,7 +87,7 @@ function calculateResult(event) {
   if(!flag){
     for(let i=0;i<KAGPi.length;i++){
       if(KAGPi[i].value === ""){
-        KAGPi[i].placeholder="Invalid Input";
+        KAGPi[i].placeholder="Invalid";
         KAGPi[i].style.border="2px solid red"
       }
     }

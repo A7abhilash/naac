@@ -42,18 +42,54 @@ function displayCriteria(criteria) {
   }
 }
 
+//Calculating KAWGP correspondingly when user enters the input
+function check(i){
+  // console.log(this.KAGPi[i].value);
+  if( this.KAGPi[i].value==='' || this.KAGPi[i].value<0 || this.KAGPi[i].value>4){
+    this.KAGPi[i].value='';
+    this.KAGPi[i].style.border="2px solid red";
+    this.KAGPi[i].placeholder="Invalid Input"
+    this.KAWGPi[i].innerHTML='';
+  }
+  else{
+    this.KAGPi[i].style.border="2px solid green";
+    this.KAWGPi[i].innerHTML = (this.Wi[i].innerHTML * this.KAGPi[i].value).toPrecision(4);
+    console.log(this.GPAi);
+  }
+
+  while(i>=0){
+    if(this.KAGPi[i].value===''){
+      this.KAGPi[i].style.border="2px solid red";
+      this.KAGPi[i].placeholder="Invalid Input"
+    }
+      i--;
+  }
+  // this.KAGPi[i-1].style.border="2px solid red"
+
+}
+
+//Calculating result
 function calculateResult(event) {
   event.preventDefault();
   let KAWGP = 0;
   let flag = true;
 
   for (let i = 0; i < KAGPi.length; i++) {
-    if (KAGPi[i].value === "" || KAGPi[i].value < 0 || KAGPi[i].value > 4) {
+    if (KAGPi[i].value === "") {
       window.alert("Invalid Input. Please follow the INSTRUCTIONS.");
       result.css("display", "none");
       total.css("visibility", "hidden");
       flag = false;
       break;
+    }
+  }
+
+  if(!flag){
+    for(let i=0;i<KAGPi.length;i++){
+      if(KAGPi[i].value === ""){
+        KAGPi[i].placeholder="Invalid Input";
+        KAGPi[i].style.border="2px solid red"
+      }
     }
   }
 

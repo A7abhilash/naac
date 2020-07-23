@@ -65,3 +65,15 @@ footer p{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (min-width:768px){
+    footer .developers{
+    border-right: 1px ridge black;
+    }
+}
+@media (max-width:767px){
+    footer .developers{
+    border-bottom: 1px solid black;
+    }
+}
+
+

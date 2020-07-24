@@ -40,6 +40,28 @@ footer {
   color: white;
 }
 
+select :nth-child(1){
+    background-color: #fc5c65;
+}
+select :nth-child(2){
+    background-color: #fd9644;
+}
+select :nth-child(3){
+    background-color: #f5cd79;
+}
+select :nth-child(4){
+    background-color: #32ff7e;
+}
+select :nth-child(5){
+    background-color: #ffb142;
+}
+select :nth-child(6){
+    background-color: #cc8e35;
+}
+select :nth-child(7){
+    background-color: #ffb8b8;
+}
+
 .Criteria2,
 .Criteria3,
 .Criteria4,

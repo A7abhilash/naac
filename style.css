@@ -95,13 +95,17 @@ tbody {
 .result {
   display: none;
 }
-.result .card-header,.submit{
+.result .card-header{
   background-color: rgb(75, 0, 130);
+  font-size: 35px;
 }
 .result dd,dt{
   font-size: 1.5rem;
 }
 
+.submit{
+  background-color: rgb(75, 0, 130);
+}
 .submit:hover{
   background-color: rgb(75, 0, 130,0.8);
 }

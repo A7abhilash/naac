@@ -30,18 +30,16 @@ footer {
 }
 
 .page {
-  /* border: 2px solid #4220577f; */
+  border: 2px solid #4220577f;
   background-color: #ddd;
-  font-size: 30px;
-  font-weight: 600;
   border-radius: 10px;
   color: black;
   transition-duration: 0.3s;
 }
-/* .page :hover {
+.page:hover {
   background-color: #4220577f;
   color: white;
-} */
+}
 
 .Criteria2,
 .Criteria3,

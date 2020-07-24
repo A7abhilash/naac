@@ -31,10 +31,9 @@ footer {
 
 .page {
   border: 2px solid #4220577f;
-  background-color: #ddd;
   border-radius: 10px;
   color: black;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 .page:hover {
   background-color: #4220577f;

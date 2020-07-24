@@ -105,6 +105,7 @@ tbody {
 
 .submit{
   background-color: rgb(75, 0, 130);
+  font-size: 20px;
 }
 .submit:hover{
   background-color: rgb(75, 0, 130,0.8);

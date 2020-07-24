@@ -30,17 +30,17 @@ footer {
 }
 
 .page {
-  border: 2px solid #4220577f;
+  border: 2px solid #4b0082;
   border-radius: 10px;
   color: black;
   transition-duration: 0.2s;
 }
 .page:hover {
-  background-color: #4220577f;
+  background-color: #4b0082;
   color: white;
 }
 
-select :nth-child(1){
+/* select :nth-child(1){
     background-color: #fc5c65;
 }
 select :nth-child(2){
@@ -60,7 +60,7 @@ select :nth-child(6){
 }
 select :nth-child(7){
     background-color: #ffb8b8;
-}
+} */
 
 .Criteria2,
 .Criteria3,

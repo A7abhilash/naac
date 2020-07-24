@@ -122,7 +122,7 @@ function calculateGPA(GPAi,j) {
       if(requiredScope!==""){
         // console.log(requiredScope);
         GPA += `+ ${requiredScope}`;
-        console.log(eval(GPA));
+        // console.log(eval(GPA));
         // continue;
       }
     } else {

@@ -1,79 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+header,
+footer {
+  background-color: #fcf951ff;
 }
 
-.jss{
-    width: 10rem;
+.jss {
+  width: 10rem;
 }
-.lcc{
-    width: 6rem;
+.lcc {
+  width: 6rem;
 }
-.collegeName{
-    font-size: 2rem;
-    font-weight: 400;
-    
+.collegeName {
+  font-size: 2rem;
+  font-weight: 400;
 }
-.clubName{
-    font-size: 1.8rem;
-    font-weight: 650;
+.clubName {
+  font-size: 1.8rem;
+  font-weight: 650;
 }
-.naac{
-    font-size: 2.2rem;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.page{
-    border-radius: 10px;
-    color: black;
-    transition-duration: 0.3s;
+.naac {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.Criteria2,.Criteria3,.Criteria4,.Criteria5,.Criteria6,.Criteria7{
-    height: auto;
-    display: none;
+.page {
+  /* border: 2px solid #4220577f; */
+  background-color: #ddd;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: black;
+  transition-duration: 0.3s;
 }
-thead{
-    font-size: 1.3rem;
-    font-weight: 700;
+/* .page :hover {
+  background-color: #4220577f;
+  color: white;
+} */
+
+.Criteria2,
+.Criteria3,
+.Criteria4,
+.Criteria5,
+.Criteria6,
+.Criteria7 {
+  height: auto;
+  display: none;
 }
-tbody{
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+thead {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+tbody {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.btn{
-    font-size: 18px;
-    font-weight: 500;
+.btn {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.total{
-    /* visibility: hidden; */
-    font-size: 1.6rem;
+.total {
+  /* visibility: hidden; */
+  font-size: 1.6rem;
 }
 
-.result{
-    display: none;
+.result {
+  display: none;
 }
 
-footer p{
-    font-size: 1.3rem;
-    font-family: Arial, Helvetica, sans-serif;
+footer p {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (min-width:768px){
-    footer .developers{
+@media (min-width: 768px) {
+  footer .developers {
     border-right: 1px ridge black;
-    }
+  }
 }
-@media (max-width:767px){
-    footer .developers{
+@media (max-width: 767px) {
+  footer .developers {
     border-bottom: 1px solid black;
-    }
+  }
 }
-
-

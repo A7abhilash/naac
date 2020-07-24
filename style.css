@@ -52,7 +52,7 @@ tbody{
 }
 
 .total{
-    visibility: hidden;
+    /* visibility: hidden; */
     font-size: 1.6rem;
 }
 

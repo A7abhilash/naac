@@ -54,17 +54,21 @@ function check(i){
   else{
     this.KAGPi[i].style.border="2px solid green";
     this.KAWGPi[i].innerHTML = (this.Wi[i].innerHTML * this.KAGPi[i].value).toPrecision(4);
-    console.log(this.GPAi);
+    // console.log(this.GPAi[0]);
+    // calculateGPA(GPAi[0],0);
+    
+  }
+  for (let i = 0; i < GPAi.length; i++) {
+    calculateGPA(GPAi[i],i);
   }
 
   while(i>=0){
     if(this.KAGPi[i].value===''){
       this.KAGPi[i].style.border="2px solid red";
-      this.KAGPi[i].placeholder="Invalid"
+      this.KAGPi[i].placeholder="Invalid";
     }
       i--;
   }
-  // this.KAGPi[i-1].style.border="2px solid red"
 
 }
 
@@ -78,7 +82,7 @@ function calculateResult(event) {
     if (KAGPi[i].value === "") {
       window.alert("Invalid Input. Please follow the INSTRUCTIONS.");
       result.css("display", "none");
-      total.css("visibility", "hidden");
+      // total.css("visibility", "hidden");
       flag = false;
       break;
     }
@@ -111,16 +115,21 @@ function calculateGPA(GPAi,j) {
   let GPA = 0;
   let scopeWi = 0;
   let scope = $(GPAi).parent().parent().children();
-
+  // console.log($(scope[0]).children());
   for (let i = 0; i < scope.length; i++) {
     let requiredScope = $(scope[i]).children()[4].innerHTML;
     if (scope[i].className === "") {
-      // console.log(requiredScope);
-      GPA += `+ ${requiredScope}`;
+      if(requiredScope!==""){
+        // console.log(requiredScope);
+        GPA += `+ ${requiredScope}`;
+        console.log(eval(GPA));
+        // continue;
+      }
     } else {
       scopeWi = $(scope[i]).children()[2].innerHTML;
       GPAi.innerHTML = eval(GPA).toPrecision(4);
       CrGPA[j].innerHTML = (GPAi.innerHTML/scopeWi).toPrecision(3)
+      // total.css("visibility", "visible");
     }
   }
 }
@@ -128,7 +137,7 @@ function calculateGPA(GPAi,j) {
 //Displaying the result
 function displayResult(KAWGP) {
   result.css("display", "block");
-  total.css("visibility", "visible");
+  // total.css("visibility", "visible");
 
   let CGPA = (KAWGP / 1000).toPrecision(3);
   cgpa.html(CGPA);

@@ -71,17 +71,19 @@ select :nth-child(7){
   height: auto;
   display: none;
 }
-thead th{
+thead th {
   font-size: 1.3rem;
   font-weight: 700;
   text-align: center !important;
   vertical-align: middle !important;
 }
-tbody {
+tbody th {
   font-size: 1rem;
   font-weight: 400;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 
 .btn {

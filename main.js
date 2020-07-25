@@ -5,7 +5,7 @@ var Wi = $(".Wi");
 var KAGPi = $(".KAGPi");
 var KAWGPi = $(".KAWGPi");
 var GPAi = $(".GPAi");
-var CrGPA=$('.CrGPA')
+var CrGPA = $(".CrGPA");
 const submit = $(".submit");
 const total = $(".total");
 const result = $(".result");
@@ -26,7 +26,7 @@ function select() {
 //Displaying the selected criteria
 function displayCriteria(criteria) {
   selectCriteria.val(criteria);
-  
+
   if (criteria !== "") {
     displayCriteriaSection.children().filter((child) => {
       // console.log(displayCriteriaSection.children()[child].className !== criteria);
@@ -43,33 +43,36 @@ function displayCriteria(criteria) {
 }
 
 //Calculating KAWGP correspondingly when user enters the input
-function check(i){
+function check(i) {
   // console.log(this.KAGPi[i].value);
-  if( this.KAGPi[i].value==='' || this.KAGPi[i].value<0 || this.KAGPi[i].value>4){
-    this.KAGPi[i].value='';
-    this.KAGPi[i].style.border="2px solid red";
-    this.KAGPi[i].placeholder="Invalid"
-    this.KAWGPi[i].innerHTML='';
-  }
-  else{
-    this.KAGPi[i].style.border="2px solid green";
-    this.KAWGPi[i].innerHTML = (this.Wi[i].innerHTML * this.KAGPi[i].value).toPrecision(4);
+  if (
+    this.KAGPi[i].value === "" ||
+    this.KAGPi[i].value < 0 ||
+    this.KAGPi[i].value > 4
+  ) {
+    this.KAGPi[i].value = "";
+    this.KAGPi[i].style.border = "2px solid red";
+    this.KAGPi[i].placeholder = "Invalid";
+    this.KAWGPi[i].innerHTML = "";
+  } else {
+    this.KAGPi[i].style.border = "2px solid green";
+    this.KAWGPi[i].innerHTML = (
+      this.Wi[i].innerHTML * this.KAGPi[i].value
+    ).toPrecision(4);
     // console.log(this.GPAi[0]);
     // calculateGPA(GPAi[0],0);
-    
   }
   for (let i = 0; i < GPAi.length; i++) {
-    calculateGPA(GPAi[i],i);
+    calculateGPA(GPAi[i], i);
   }
 
-  while(i>=0){
-    if(this.KAGPi[i].value===''){
-      this.KAGPi[i].style.border="2px solid red";
-      this.KAGPi[i].placeholder="Invalid";
+  while (i >= 0) {
+    if (this.KAGPi[i].value === "") {
+      this.KAGPi[i].style.border = "2px solid red";
+      this.KAGPi[i].placeholder = "Invalid";
     }
-      i--;
+    i--;
   }
-
 }
 
 //Calculating result
@@ -88,11 +91,11 @@ function calculateResult(event) {
     }
   }
 
-  if(!flag){
-    for(let i=0;i<KAGPi.length;i++){
-      if(KAGPi[i].value === ""){
-        KAGPi[i].placeholder="Invalid";
-        KAGPi[i].style.border="2px solid red"
+  if (!flag) {
+    for (let i = 0; i < KAGPi.length; i++) {
+      if (KAGPi[i].value === "") {
+        KAGPi[i].placeholder = "Invalid";
+        KAGPi[i].style.border = "2px solid red";
       }
     }
   }
@@ -104,14 +107,14 @@ function calculateResult(event) {
     }
 
     for (let i = 0; i < GPAi.length; i++) {
-      calculateGPA(GPAi[i],i);
+      calculateGPA(GPAi[i], i);
     }
     displayResult(eval(KAWGP));
   }
 }
 
 //Calculating GPA
-function calculateGPA(GPAi,j) {
+function calculateGPA(GPAi, j) {
   let GPA = 0;
   let scopeWi = 0;
   let scope = $(GPAi).parent().parent().children();
@@ -119,16 +122,15 @@ function calculateGPA(GPAi,j) {
   for (let i = 0; i < scope.length; i++) {
     let requiredScope = $(scope[i]).children()[4].innerHTML;
     if (scope[i].className === "") {
-      if(requiredScope!==""){
+      if (requiredScope !== "") {
         // console.log(requiredScope);
         GPA += `+ ${requiredScope}`;
         // console.log(eval(GPA));
-        // continue;
       }
     } else {
       scopeWi = $(scope[i]).children()[2].innerHTML;
       GPAi.innerHTML = eval(GPA).toPrecision(4);
-      CrGPA[j].innerHTML = (GPAi.innerHTML/scopeWi).toPrecision(3)
+      CrGPA[j].innerHTML = (GPAi.innerHTML / scopeWi).toPrecision(3);
       // total.css("visibility", "visible");
     }
   }

@@ -71,9 +71,11 @@ select :nth-child(7){
   height: auto;
   display: none;
 }
-thead {
+thead th{
   font-size: 1.3rem;
   font-weight: 700;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 tbody {
   font-size: 1rem;
@@ -95,20 +97,21 @@ tbody {
 .result {
   display: none;
 }
-.result .card-header{
+.result .card-header {
   background-color: rgb(75, 0, 130);
   font-size: 35px;
 }
-.result dd,dt{
+.result dd,
+dt {
   font-size: 1.5rem;
 }
 
-.submit{
+.submit {
   background-color: rgb(75, 0, 130);
   font-size: 20px;
 }
-.submit:hover{
-  background-color: rgb(75, 0, 130,0.8);
+.submit:hover {
+  background-color: rgb(75, 0, 130, 0.8);
 }
 
 footer p {

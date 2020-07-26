@@ -80,7 +80,7 @@ function calculateResult(event) {
   event.preventDefault();
   let KAWGP = 0;
   let flag = true;
-
+  
   for (let i = 0; i < KAGPi.length; i++) {
     if (KAGPi[i].value === "") {
       window.alert("Invalid Input. Please follow the INSTRUCTIONS.");
@@ -90,7 +90,7 @@ function calculateResult(event) {
       break;
     }
   }
-
+  
   if (!flag) {
     for (let i = 0; i < KAGPi.length; i++) {
       if (KAGPi[i].value === "") {
@@ -98,17 +98,21 @@ function calculateResult(event) {
         KAGPi[i].style.border = "2px solid red";
       }
     }
+    submit.attr('data-toggle','')
+    submit.attr('data-target','')
   }
-
+  
   if (flag) {
     for (let i = 0; i < KAWGPi.length; i++) {
       KAWGPi[i].innerHTML = (Wi[i].innerHTML * KAGPi[i].value).toPrecision(4);
       KAWGP += `+ ${KAWGPi[i].innerHTML}`;
     }
-
+    
     for (let i = 0; i < GPAi.length; i++) {
       calculateGPA(GPAi[i], i);
     }
+    submit.attr('data-toggle','modal')
+    submit.attr('data-target','#myModal')
     displayResult(eval(KAWGP));
   }
 }

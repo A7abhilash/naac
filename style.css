@@ -99,7 +99,7 @@ tbody th {
 .result {
   display: none;
 }
-.result .card-header {
+.result .card-header .modal-header{
   background-color: rgb(75, 0, 130);
   font-size: 35px;
 }

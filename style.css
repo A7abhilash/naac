@@ -91,17 +91,21 @@ tbody th {
   font-weight: 500;
 }
 
-.total {
+.total th{
   /* visibility: hidden; */
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .result {
   display: none;
 }
-.result .card-header .modal-title{
-  background-color: rgb(75, 0, 130);
-  font-size: 35px;
+.result .modal-title{
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgb(75, 0, 130) ;
+  font-size: 35px ;
 }
 .result dd,
 dt {

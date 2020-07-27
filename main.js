@@ -44,6 +44,7 @@ function displayCriteria(criteria) {
 
 //Calculating KAWGP correspondingly when user enters the input
 function check(i) {
+  // console.log(this);
   // console.log(this.KAGPi[i].value);
   if (
     this.KAGPi[i].value === "" ||

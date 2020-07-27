@@ -666,12 +666,35 @@
     </section>
     <!-- END:Criteria -->
 
+ 
     <!-- START:Results -->
     <section class="result mb-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
-            <div class="card">
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-light">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Results</h3>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <dt class="col-6">CGPA:</dt>
+                      <dd class="col-6 cgpa"></dd>
+                      <dt class="col-6">Grade:</dt>
+                      <dd class="col-6 grade"></dd>
+                      <dt class="col-6">Status:</dt>
+                      <dd class="col-6 outcome"></dd>
+                    </div>  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="card">
               <h3 class="card-header text-white text-center">
                 Results
               </h3>
@@ -685,7 +708,7 @@
                   <dd class="col-6 outcome"></dd>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -706,13 +729,18 @@
     <!-- END:Footer -->
 
     <!-- Offline -->
-    <!-- <script src="./bootstrap/js/jQuery.js"></script> -->
+    <!-- <script src="../bootstrap/js/jQuery.js"></script>
+    <script src="./../bootstrap/js/popper.min.js"></script>
+    <script src="./../bootstrap/js/bootstrap.min.js"></script> -->
     <!-- Online -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <script src="../main.js"></script>
   </body>

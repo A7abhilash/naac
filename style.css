@@ -30,13 +30,14 @@ footer {
 }
 
 .page {
-  border: 2px solid #4b0082;
+  /* border: 2px solid #4b0082; */
+  border: 2px solid #d35400;
   border-radius: 10px;
   color: black;
   transition-duration: 0.2s;
 }
 .page:hover {
-  background-color: #4b0082;
+  background-color: #d35400;
   color: white;
 }
 
